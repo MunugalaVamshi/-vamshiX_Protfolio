@@ -25,7 +25,7 @@
   color: inherit;
   border-radius: 1rem;
   padding: 1.5rem;
-  width: 100%;
+  width: 90%;
   max-width: 28rem; /* ~448px */
 }
 
@@ -112,96 +112,139 @@
       <h1 class="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">VamshiX</h1>     
       <ul class="flex space-x-6 text-gray-300 font-medium">
         <li><a href="#hero" class="hover:text-cyan-400 transition">Home</a></li>
-        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
-        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
-        <li><a href="#resume" class="hover:text-cyan-400 transition">Resume</a></li>
-        <li><a href="#testimonials" class="hover:text-cyan-400 transition">Testimonials</a></li>
-        <li><a href="#clients" class="hover:text-cyan-400 transition">Clients</a></li>
-        <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
-        <ul class="flex space-x-6">
-        <li><a href="#" id="openSignin" class="hover:text-cyan-400 transition">Sign In</a></li>
-        </ul>
+        <li><a href="#skills" class="hover:text-cyan-400 transition">About</a></li>     
+        
       </ul>
     </div>
   </nav>
 
-<!-- Modal Background -->
-<div id="authModal" class="modal hidden fixed inset-0 flex items-center justify-center z-50">
-  <div class="modal-content relative">
-    <!-- Close button -->
-    <button id="closeModal" class="close-btn">&times;</button>
 
-    <!-- Sign In Form -->
-    <div id="signinForm">
-      <h2 class="form-title">Sign In</h2>
-      <form action="/signin" method="POST" class="form">
-        <div>
-          <label>Email</label>
-          <input type="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Enter your password" required>
-        </div>
-        <button type="submit" class="btn">Sign In</button>
-      </form><br>
-      <p class="switch-text">Don’t have an account?
-        <a href="#" id="showSignup">&nbsp&nbspSign Up</a>
-      </p>
-    </div>
+  <!-- ================= HERO ================= -->
+<section id="hero" class="min-h-screen flex items-center justify-center text-center relative px-6"
+  style="background-image:url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1500&q=80'); background-size:cover;">
+  <div class="absolute inset-0 bg-black/70"></div>
 
-    <!-- Sign Up Form -->
-    <div id="signupForm" class="hidden">
-      <h2 class="form-title">Sign Up</h2>
-      <form action="/signup" method="POST" class="form">
-        <div>
-          <label>Full Name</label>
-          <input type="text" name="fullname" placeholder="Enter your name" required>
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Create a password" required>
-        </div>
-        <button type="submit" class="btn">Sign Up</button>
-      </form><br>
-      <p class="switch-text">Already have an account?
-        <a href="#" id="showSignin">&nbsp&nbspSign In</a>
-      </p>
+  <div class="relative z-10 max-w-4xl">
+    <h1 class="text-6xl font-extrabold mb-4">
+      Hi, I'm <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Vamshi Munugala</span>
+    </h1>
+    <h2 class="text-2xl text-cyan-300 font-semibold mb-6">
+      Full-Stack Developer | Python | GenAI | Cloud (AWS)
+    </h2>
+    <p class="text-lg text-gray-200 mb-8">
+      Final-year B.Tech CSE student passionate about building scalable real-world applications using
+      Python, Full-Stack technologies, Generative AI, and Cloud platforms.
+    </p>
+
+    <div class="flex justify-center gap-6 flex-wrap">
+      <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold hover:scale-105 transition">
+        View Projects
+      </a>
+      <a href="#contact" class="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black transition">
+        Contact Me
+      </a>
     </div>
   </div>
-</div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-24 max-w-6xl mx-auto px-6">
+  <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">
+    About Me
+  </h2>
+
+  <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl space-y-6 text-gray-300 text-lg leading-relaxed">
+    
+    <p>
+      👤 <b>Professional Profile</b><br>
+      I am a <b>final-year B.Tech Computer Science & Engineering student</b> at
+      <b>Scient Institute of Technology</b>, with hands-on experience in building
+      scalable, production-ready software solutions.
+      I have a strong passion for problem-solving, clean code, and modern
+      software engineering practices.
+    </p>
+
+    <p>
+      💻 <b>Technical Expertise</b><br>
+      I specialize in <b>Full-Stack Web Development</b> using
+      <b>Python, Django, Flask, React, HTML, CSS, and JavaScript</b>.
+      I have experience working with relational and NoSQL databases
+      (<b>MySQL, MongoDB</b>) and deploying applications on
+      <b>AWS EC2</b> with Linux-based server environments.
+    </p>
+
+    <p>
+      🚀 <b>What Sets Me Apart</b><br>
+      I focus on building <b>real-world, end-to-end projects</b> that solve practical problems,
+      including AI-powered systems, automation tools, and cloud-deployed applications.
+      I continuously upskill in <b>Generative AI, system design, and cloud technologies</b>
+      to stay aligned with industry standards.
+    </p>
+
+    <p>
+      🎯 <b>Career Objective</b><br>
+      Actively seeking an <b>entry-level Software Engineer / Full-Stack Developer</b> role
+      where I can contribute to impactful projects, collaborate with experienced teams,
+      and grow into a high-performing software professional in a forward-thinking organization.
+    </p>
+
+  </div>
+</section>
 
 
 
+  <!-- ================= SKILLS ================= -->
+<section id="skills" class="py-24 max-w-7xl mx-auto px-6">
+  <h2 class="text-4xl font-bold text-center mb-14 text-cyan-400">
+    Technical Skills
+  </h2>
 
-  <!-- Hero -->
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1500&q=80');">
-    <div class="absolute inset-0 bg-black/60"></div>
-    <div class="relative z-10">
-      <h1 class="text-6xl font-extrabold mb-6 drop-shadow-lg">Hi, I'm <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Vamshi</span></h1>
-      <p class="text-lg max-w-2xl mb-8 text-gray-200">A passionate Web Developer & Generative AI Enthusiast creating modern, responsive and intelligent applications.</p>
-      <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:scale-105 hover:from-cyan-400 hover:to-blue-500 shadow-xl transition">View My Work</a>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+    <!-- Frontend Development -->
+    <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-2">Frontend Development</h3>
+      <p class="text-gray-300">
+        HTML5, CSS3, JavaScript<br>
+         React.js
+        
+      </p>
     </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-24 max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-14 text-cyan-400">Skills</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition"><b>FRONTEND</b><br>Html ,Css ,Javascript</div>
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition"><b>BACKEND</b><br>Python, Django ,Flask,           FastAPI</div>
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition"><b>GENERETIVE AI</b><br>AI/ML ,DL ,NLP</div>
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition"><b>DATABASE</b><br>Mysql, MongoDB, Sql lit</div>
-      <!--div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">Django</div>
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">Python</div>
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">AI / ML</div>
-      <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">TailwindCSS</div-->
+    <!-- Backend Development -->
+    <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-2">Backend Development</h3>
+      <p class="text-gray-300">
+         Python Programming<br>
+         Django, Flask, FastAPI<br>
+         REST APIs, CRUD Operations
+      </p>
     </div>
-  </section>
+
+    <!-- AI & Generative AI -->
+    <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-2">AI & Generative AI</h3>
+      <p class="text-gray-300">
+         Machine Learning & Deep Learning<br>
+         NLP, Large Language Models (LLMs)<br>
+         AI Model Development & Deployment
+      </p>
+    </div>
+
+    <!-- Database & Cloud -->
+    <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">
+      <h3 class="text-lg font-semibold text-cyan-300 mb-2">Database & Cloud</h3>
+      <p class="text-gray-300">
+         MySQL, MongoDB, SQLite<br>
+         AWS EC2, Linux Server Deployment Cloud<br>
+        
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
  <!-- Projects -->
 <section id="projects" class="py-24 bg-fixed bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80');">
@@ -227,67 +270,157 @@
         <h3 class="font-semibold text-xl mb-3 text-blue-400">Drive Storage</h3>
         <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
       </a>
-<!-- Malicious_URL_Detection -->
+<!-- Collage Management System -->
       <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Malicious_URL_Detection</h3>
+        <h3 class="font-semibold text-xl mb-3 text-blue-400">Collage Management System</h3>
         <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
       </a>
 
-<!-- Voice Assistent -->
+<!-- Jarvis personal voice assistent  -->
       <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400"> Voice Assistent</h3>
+        <h3 class="font-semibold text-xl mb-3 text-blue-400"> Jarvis Personal Voice Assistent</h3>
         <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
       </a>
-<!-- Moliqueces -->
+<!-- Geolink -->
       <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Vegetable Delivery App</h3>
+        <h3 class="font-semibold text-xl mb-3 text-blue-400">Geolink</h3>
+        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      </a>
+<!--  inventory-management-system -->
+      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
+        <h3 class="font-semibold text-xl mb-3 text-blue-400"> inventory-management-system</h3>
         <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
       </a>
 
+<!-- MALICIOUS URL DETECTION -->
+      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
+        <h3 class="font-semibold text-xl mb-3 text-blue-400">MALICIOUS URL DETECTION</h3>
+        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      </a>
 
+<!--  Smart City AI Command & Decision System-->
+      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
+        <h3 class="font-semibold text-xl mb-3 text-blue-400">Smart City AI Command & Decision System</h3>
+        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      </a>
     </div>
   </div>
 </section>
 
 
-  <!-- Resume -->
+  
+
+    <!-- ================= INTERNSHIP ================= -->
+<section id="internship" class="py-24 max-w-6xl mx-auto px-6">
+  <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">Internship</h2>
+
+  <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
+    <h3 class="text-2xl font-semibold text-blue-400">
+      Software Development Intern – Ediglob
+    </h3>
+
+    <p class="mt-2"><b>Duration:</b> Sep 5, 2025 – Nov 5, 2025</p>
+    <p><b>Skills:</b> Python, Web Development, Git/GitHub, Real-Time Projects</p>
+
+    <p class="mt-3">
+      Worked on real-world applications, backend logic, database integration,
+      and received internship & project completion certificate.
+    </p>
+
+    <!-- Certificates Section -->
+    <div class="mt-6">
+      <h4 class="text-lg font-semibold text-cyan-300 mb-4">
+        Completion Certificates
+      </h4>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Internship Certificate -->
+        <img
+  src="{{ url_for('static', filename='internship completion.jpeg') }}"
+  alt="Ediglob Internship Completion Certificate"
+  class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition duration-300"
+  onclick="openModal(this.src)"
+/>
+
+<!-- Project Certificate -->
+<img
+  src="{{ url_for('static', filename='project completion.jpeg') }}"
+  alt="Ediglob Project Completion Certificate"
+  class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition duration-300"
+  onclick="openModal(this.src)"
+/>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Preview Modal -->
+<div
+  id="imageModal"
+  class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50"
+  onclick="closeModal()"
+>
+  <img
+    id="modalImage"
+    class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
+  />
+</div>
+
+ 
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="py-24 max-w-6xl mx-auto px-6">
+  <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">
+    Education
+  </h2>
+
+  <div class="space-y-8">
+
+    <!-- B.Tech -->
+    <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
+      <h3 class="text-2xl font-semibold text-blue-400">
+        Bachelor of Technology (B.Tech)
+      </h3>
+
+      <p><b>Branch:</b> Computer Science & Engineering</p>
+      <p><b>College:</b> Scient Institute of Technology</p>
+      <p><b>Duration:</b> 2022 – 2026 (Pursuing)</p>
+      <p><b>Location:</b> Kanapoor, Ibrahimpatnam, Hyderabad, Telangana</p>
+    </div>
+
+    <!-- Intermediate -->
+    <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
+      <h3 class="text-2xl font-semibold text-blue-400">
+        Intermediate (12th Grade)
+      </h3>
+
+      <p><b>College:</b> Srigayatri Junior College</p>
+      <p><b>Stream:</b> MPC</p>
+      <p><b>Year of Completion:</b> 2021</p>
+      <p><b>Location:</b> Adibatla, Hyderabad, Telangana</p>
+    </div>
+
+    <!-- School -->
+    <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
+      <h3 class="text-2xl font-semibold text-blue-400">
+        Secondary School (10th Grade)
+      </h3>
+
+      <p><b>School:</b> Hyderabad Sainik School</p>
+      <p><b>Year of Completion:</b> 2019</p>
+      <p><b>Location:</b> I.S. Sadhan, Hyderabad, Telangana</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Resume -->
   <section id="resume" class="py-24 max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold mb-10 text-cyan-400">Resume</h2>
     <p class="mb-8 text-gray-300">Download my latest resume showcasing skills, projects, and achievements.</p>
-    <a href="static/resume-python2025.docx" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl text-white font-semibold hover:scale-105 hover:from-blue-500 hover:to-cyan-400 shadow-xl transition">Download Resume</a>
+    <a href="static/vamshi-resume.pdf" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl text-white font-semibold hover:scale-105 hover:from-blue-500 hover:to-cyan-400 shadow-xl transition" target="_nextline">Download Resume</a>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="py-24 bg-fixed bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80');">
-    <div class="absolute inset-0 bg-black/80"></div>
-    <div class="relative max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-14 text-cyan-400">Testimonials</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:shadow-cyan-500/20 transition">
-          <p class="text-gray-300">"Vamshi's AI solutions helped automate our workflows efficiently!"</p>
-          <span class="block mt-4 font-semibold text-blue-400">— Client A</span>
-        </div>
-        <div class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:shadow-cyan-500/20 transition">
-          <p class="text-gray-300">"A true professional with deep technical expertise in web development."</p>
-          <span class="block mt-4 font-semibold text-blue-400">— Client B</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients -->
-  <section id="clients" class="py-24 max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-10 text-cyan-400">Clients</h2>
-    <p class="mb-10 text-gray-300">Trusted by innovative companies and startups worldwide.</p>
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
-      <!--img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Coinbase.svg" alt="Coinbase" class="h-12 mx-auto grayscale hover:grayscale-0 transition"/-->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify" class="h-12 mx-auto grayscale hover:grayscale-0 transition"/>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest" class="h-12 mx-auto grayscale hover:grayscale-0 transition"/>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-12 mx-auto grayscale hover:grayscale-0 transition"/>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-12 mx-auto grayscale hover:grayscale-0 transition"/>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix" class="h-12 mx-auto grayscale hover:grayscale-0 transition"/>
-    </div>
-  </section>
 
   <!-- Contact -->
   <section id="contact" class="py-24 bg-gradient-to-r from-gray-900 to-black">
@@ -301,11 +434,18 @@
   </section>
 
   <!-- Add Font Awesome in your <head> -->
-
-
 <footer class="bg-black/80 py-6 text-center border-t border-gray-800">
-  <p class="text-gray-500">© 2025 Vamshi. All rights reserved.</p>
+ <p class="text-gray-500">
+    © 2025 Vamshi Munugala • Full-Stack Developer • Python • GenAI • AWS
+  </p><br>
   
+  
+  <div class="text-center text-gray-300 mb-8">
+    <p>Email: <b>vamshimunugala46@gmail.com</b></p>
+    <p>Phone: <b>+91 8143158903</b></p>
+    <p>Location: <b>Imamguda, Hyderabad, India</b></p>
+  </div>
+  <hr>
   <!-- Social Icons -->
   <div class="flex justify-center space-x-6 mt-3">
     <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl">
@@ -351,6 +491,19 @@
     signupForm.classList.add("hidden");
     signinForm.classList.remove("hidden");
   });
+
+
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").classList.add("hidden");
+    document.getElementById("imageModal").classList.remove("flex");
+  }
+
 </script>
 </body>
 </html>
