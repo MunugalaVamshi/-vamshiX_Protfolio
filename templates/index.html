@@ -102,6 +102,11 @@
   cursor: pointer;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
   </style>
 </head>
 <body class="text-white font-sans">
@@ -112,8 +117,8 @@
       <h1 class="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">VamshiX</h1>     
       <ul class="flex space-x-6 text-gray-300 font-medium">
         <li><a href="#hero" class="hover:text-cyan-400 transition">Home</a></li>
-        <li><a href="#skills" class="hover:text-cyan-400 transition">About</a></li>     
-        
+        <li><a href="#about" id="about-link" class="hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#our-services" id="service-link" class="hover:text-cyan-400 transition">Service</a></li>        
       </ul>
     </div>
   </nav>
@@ -132,8 +137,7 @@
       Full-Stack Developer | Python | GenAI | Cloud (AWS)
     </h2>
     <p class="text-lg text-gray-200 mb-8">
-      Final-year B.Tech CSE student passionate about building scalable real-world applications using
-      Python, Full-Stack technologies, Generative AI, and Cloud platforms.
+     I build scalable, production-ready applications and deliver reliable, cloud-ready solutions, seeking opportunities to contribute to innovative teams.
     </p>
 
     <div class="flex justify-center gap-6 flex-wrap">
@@ -147,50 +151,14 @@
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="py-24 max-w-6xl mx-auto px-6">
-  <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">
-    About Me
-  </h2>
-
-  <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl space-y-6 text-gray-300 text-lg leading-relaxed">
-    
-    <p>
-      👤 <b>Professional Profile</b><br>
-      I am a <b>final-year B.Tech Computer Science & Engineering student</b> at
-      <b>Scient Institute of Technology</b>, with hands-on experience in building
-      scalable, production-ready software solutions.
-      I have a strong passion for problem-solving, clean code, and modern
-      software engineering practices.
-    </p>
-
-    <p>
-      💻 <b>Technical Expertise</b><br>
-      I specialize in <b>Full-Stack Web Development</b> using
-      <b>Python, Django, Flask, React, HTML, CSS, and JavaScript</b>.
-      I have experience working with relational and NoSQL databases
-      (<b>MySQL, MongoDB</b>) and deploying applications on
-      <b>AWS EC2</b> with Linux-based server environments.
-    </p>
-
-    <p>
-      🚀 <b>What Sets Me Apart</b><br>
-      I focus on building <b>real-world, end-to-end projects</b> that solve practical problems,
-      including AI-powered systems, automation tools, and cloud-deployed applications.
-      I continuously upskill in <b>Generative AI, system design, and cloud technologies</b>
-      to stay aligned with industry standards.
-    </p>
-
-    <p>
-      🎯 <b>Career Objective</b><br>
-      Actively seeking an <b>entry-level Software Engineer / Full-Stack Developer</b> role
-      where I can contribute to impactful projects, collaborate with experienced teams,
-      and grow into a high-performing software professional in a forward-thinking organization.
-    </p>
-
-  </div>
+<section id="about" style="max-width:800px; margin:auto; padding:40px 20px; color:#e5e7eb; line-height:1.8;">
+  <h2 class="text-4xl font-bold text-center mb-14 text-cyan-400">About Me</h2>
+  <p>
+    I am a technology professional specializing in Gen-AI and software development, delivering innovative solutions that solve real-world problems and enhance user experiences. 
+    Experienced in Python, Django, React, and AI/ML projects, with a focus on creating efficient, scalable, and maintainable solutions. 
+    Seeking opportunities to contribute to impactful projects and drive technological innovation in a dynamic work environment.
+  </p>
 </section>
-
 
 
   <!-- ================= SKILLS ================= -->
@@ -217,7 +185,7 @@
       <p class="text-gray-300">
          Python Programming<br>
          Django, Flask, FastAPI<br>
-         REST APIs, CRUD Operations
+          CRUD Operations
       </p>
     </div>
 
@@ -235,7 +203,7 @@
     <div class="p-6 bg-gray-800/70 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700/80 transition">
       <h3 class="text-lg font-semibold text-cyan-300 mb-2">Database & Cloud</h3>
       <p class="text-gray-300">
-         MySQL, MongoDB, SQLite<br>
+         MySQL, MongoDB<br>
          AWS EC2, Linux Server Deployment Cloud<br>
         
       </p>
@@ -246,69 +214,128 @@
 
 
 
- <!-- Projects -->
-<section id="projects" class="py-24 bg-fixed bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80');">
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-24 bg-fixed bg-cover bg-center relative"
+  style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80');">
+
   <div class="absolute inset-0 bg-black/80"></div>
+
   <div class="relative max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold text-center mb-14 text-cyan-400">Projects</h2>
+
     <div class="grid md:grid-cols-3 gap-10">
-      
+
       <!-- AI Code Assistant -->
-      <a href="https://your-ai-code-assistant-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">AI Code Assistant</h3>
-        <p class="text-gray-300">Analyzes, fixes, and executes code with ML integration.</p>
+      <a href="https://github.com/MunugalaVamshi/Drive.git" target="_blank"
+        class="bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block overflow-hidden">
+        
+       <img src="{{ url_for('static', filename='aicodeassistent.jpg') }}"
+     alt="AI Code Assistant" class="w-full h-40 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-2 text-blue-400">AI Code Assistant</h3>
+          <p class="text-gray-300 text-sm mb-1">
+            AI-powered system to analyze, fix, and execute code automatically.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Features: Error detection, auto-fix, code execution, explanations.
+          </p>
+        </div>
       </a>
 
       <!-- Face Recognition Attendance -->
-      <a href="https://your-face-recognition-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Face Recognition Attendance</h3>
-        <p class="text-gray-300">Automated student attendance with AI-powered recognition.</p>
+      <a href="https://github.com/MunugalaVamshi/-Face_Recognize_Attendance_System.git" target="_blank"
+        class="bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block overflow-hidden">
+
+        <img src="{{ url_for('static', filename='face_recognition_attendance_system.jpg') }}"
+     alt="Face Recognition Attendance" class="w-full h-40 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-2 text-blue-400">Face Recognition Attendance</h3>
+          <p class="text-gray-300 text-sm mb-1">
+            Automated attendance system using real-time face recognition.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Features: Live camera scan, MySQL storage, time-based attendance.
+          </p>
+        </div>
       </a>
 
-      <!-- Drive-Storage -->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Drive Storage</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
-      </a>
-<!-- Collage Management System -->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Collage Management System</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      <!-- Drive Storage -->
+      <a href="https://github.com/MunugalaVamshi/Drive.git" target="_blank"
+        class="bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block overflow-hidden">
+
+       <img src="{{ url_for('static', filename='drive_storage.jpg') }}"
+     alt="Drive Storage" class="w-full h-40 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-2 text-blue-400">Drive Storage</h3>
+          <p class="text-gray-300 text-sm mb-1">
+            Cloud-based file storage and management application.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Features: File upload, secure access, AWS deployment.
+          </p>
+        </div>
       </a>
 
-<!-- Jarvis personal voice assistent  -->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400"> Jarvis Personal Voice Assistent</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
-      </a>
-<!-- Geolink -->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Geolink</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
-      </a>
-<!--  inventory-management-system -->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400"> inventory-management-system</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      <!-- College Management System -->
+      <a href="https://github.com/MunugalaVamshi/collage-management-system.git" target="_blank"
+        class="bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block overflow-hidden">
+
+       <img src="{{ url_for('static', filename='college_management_system.jpg') }}"
+     alt="College Management System" class="w-full h-40 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-2 text-blue-400">College Management System</h3>
+          <p class="text-gray-300 text-sm mb-1">
+            Centralized system to manage users, data, and workflows.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Features: Records, dashboards, admin controls.
+          </p>
+        </div>
       </a>
 
-<!-- MALICIOUS URL DETECTION -->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">MALICIOUS URL DETECTION</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      <!-- Jarvis Voice Assistant -->
+      <a href="https://github.com/MunugalaVamshi/Jarvis.git" target="_blank"
+        class="bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block overflow-hidden">
+
+       <img src="{{ url_for('static', filename='jarvis.jpg') }}"
+     alt="Jarvis Voice Assistant" class="w-full h-40 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-2 text-blue-400">Jarvis Voice Assistant</h3>
+          <p class="text-gray-300 text-sm mb-1">
+            Personal AI voice assistant inspired by Jarvis.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Features: Voice commands, automation, AI integration.
+          </p>
+        </div>
       </a>
 
-<!--  Smart City AI Command & Decision System-->
-      <a href="https://your-vegetable-delivery-link.com" target="_blank" class="p-6 bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block">
-        <h3 class="font-semibold text-xl mb-3 text-blue-400">Smart City AI Command & Decision System</h3>
-        <p class="text-gray-300">Dynamic pricing with real-time market integration.</p>
+      <!-- GeoLink -->
+      <a href="https://github.com/MunugalaVamshi/Jarvis.git" target="_blank"
+        class="bg-gray-900/80 rounded-xl shadow-xl hover:scale-105 hover:shadow-cyan-500/20 transition block overflow-hidden">
+
+       <img src="{{ url_for('static', filename='geolink.jpg') }}"
+     alt="GeoLink" class="w-full h-40 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-2 text-blue-400">GeoLink</h3>
+          <p class="text-gray-300 text-sm mb-1">
+            Location-based service and tracking application.
+          </p>
+          <p class="text-gray-400 text-xs">
+            Features: Maps integration, live tracking, geo-coordinates.
+          </p>
+        </div>
       </a>
+
     </div>
-  </div>
+  </div>F
 </section>
 
-
-  
 
     <!-- ================= INTERNSHIP ================= -->
 <section id="internship" class="py-24 max-w-6xl mx-auto px-6">
@@ -334,9 +361,9 @@
       </h4>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <!-- Internship Certificate -->
-        <img
-  src="{{ url_for('static', filename='internship completion.jpeg') }}"
+       <!-- Internship Certificate -->
+<img
+  src="{{ url_for('static', filename='internship_completion.jpeg') }}"
   alt="Ediglob Internship Completion Certificate"
   class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition duration-300"
   onclick="openModal(this.src)"
@@ -344,11 +371,12 @@
 
 <!-- Project Certificate -->
 <img
-  src="{{ url_for('static', filename='project completion.jpeg') }}"
+  src="{{ url_for('static', filename='project_completion.jpeg') }}"
   alt="Ediglob Project Completion Certificate"
   class="rounded-xl shadow-lg cursor-pointer hover:scale-105 transition duration-300"
   onclick="openModal(this.src)"
 />
+
 
       </div>
     </div>
@@ -367,45 +395,42 @@
   />
 </div>
 
- 
-<!-- ================= EDUCATION ================= -->
+ <!-- ================= EDUCATION ================= -->
 <section id="education" class="py-24 max-w-6xl mx-auto px-6">
   <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">
     Education
   </h2>
 
-  <div class="space-y-8">
+  <!-- Grid container -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <!-- B.Tech -->
+    <!-- LEFT: B.Tech -->
     <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
       <h3 class="text-2xl font-semibold text-blue-400">
         Bachelor of Technology (B.Tech)
       </h3>
-
       <p><b>Branch:</b> Computer Science & Engineering</p>
       <p><b>College:</b> Scient Institute of Technology</p>
       <p><b>Duration:</b> 2022 – 2026 (Pursuing)</p>
       <p><b>Location:</b> Kanapoor, Ibrahimpatnam, Hyderabad, Telangana</p>
     </div>
 
-    <!-- Intermediate -->
+    <!-- MIDDLE: Intermediate -->
     <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
       <h3 class="text-2xl font-semibold text-blue-400">
         Intermediate (12th Grade)
       </h3>
-
       <p><b>College:</b> Srigayatri Junior College</p>
       <p><b>Stream:</b> MPC</p>
       <p><b>Year of Completion:</b> 2021</p>
       <p><b>Location:</b> Adibatla, Hyderabad, Telangana</p>
     </div>
 
-    <!-- School -->
+    <!-- RIGHT: Secondary School -->
     <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl text-gray-300">
       <h3 class="text-2xl font-semibold text-blue-400">
         Secondary School (10th Grade)
       </h3>
-
       <p><b>School:</b> Hyderabad Sainik School</p>
       <p><b>Year of Completion:</b> 2019</p>
       <p><b>Location:</b> I.S. Sadhan, Hyderabad, Telangana</p>
@@ -413,6 +438,8 @@
 
   </div>
 </section>
+
+
 
 <!-- Resume -->
   <section id="resume" class="py-24 max-w-6xl mx-auto px-6 text-center">
@@ -422,81 +449,239 @@
   </section>
 
 
-  <!-- Contact -->
-  <section id="contact" class="py-24 bg-gradient-to-r from-gray-900 to-black">
-    <h2 class="text-4xl font-bold text-center mb-10 text-cyan-400">Contact Me</h2>
-    <form class="max-w-3xl mx-auto px-6 space-y-6">
-      <input type="text" placeholder="Your Name" class="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-cyan-400 focus:outline-none" />
-      <input type="email" placeholder="Your Email" class="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-cyan-400 focus:outline-none" />
-      <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-cyan-400 focus:outline-none"></textarea>
-      <button type="submit" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:scale-105 hover:from-cyan-400 hover:to-blue-500 shadow-xl transition">Send Message</button>
-    </form>
-  </section>
+<section id="our-services" class="py-24 max-w-7xl mx-auto px-6">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
-  <!-- Add Font Awesome in your <head> -->
-<footer class="bg-black/80 py-6 text-center border-t border-gray-800">
- <p class="text-gray-500">
-    © 2025 Vamshi Munugala • Full-Stack Developer • Python • GenAI • AWS
-  </p><br>
-  
-  
-  <div class="text-center text-gray-300 mb-8">
-    <p>Email: <b>vamshimunugala46@gmail.com</b></p>
-    <p>Phone: <b>+91 8143158903</b></p>
-    <p>Location: <b>Imamguda, Hyderabad, India</b></p>
+    <!-- LEFT SIDE : OUR SERVICES INFO -->
+    <div>
+      <h2 class="text-4xl font-bold text-cyan-400 mb-6">Our Services</h2>
+      <p class="text-gray-300 leading-relaxed">
+        Our services are designed to turn your vision into reality. With a focus on
+        innovation, quality, and customer satisfaction, we deliver tailored solutions
+        that drive success and exceed expectations.
+      </p>
+    </div>
+
+    <!-- MIDDLE : SLIDES 01 - 03 -->
+    <div class="flex flex-col gap-8">
+      <div class="flex items-start gap-4 animate-fade-in-up">
+        <div class="text-3xl font-bold text-blue-400">01</div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-200">Web Development</h3>
+          <p class="text-gray-400">Responsive websites and dynamic applications across all platforms.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 animate-fade-in-up delay-150">
+        <div class="text-3xl font-bold text-blue-400">02</div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-200">Python Development</h3>
+          <p class="text-gray-400">Django, Flask, FastAPI, and automation solutions.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 animate-fade-in-up delay-300">
+        <div class="text-3xl font-bold text-blue-400">03</div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-200">AI & Generative AI</h3>
+          <p class="text-gray-400">ML, NLP, LLMs, Chatbots, and intelligent automation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT : SLIDES 04 - 06 -->
+    <div class="flex flex-col gap-8">
+      <div class="flex items-start gap-4 animate-fade-in-up delay-450">
+        <div class="text-3xl font-bold text-blue-400">04</div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-200">Database Management</h3>
+          <p class="text-gray-400">MySQL & MongoDB design, optimization, and secure storage.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 animate-fade-in-up delay-600">
+        <div class="text-3xl font-bold text-blue-400">05</div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-200">Full-Stack Development</h3>
+          <p class="text-gray-400">Complete frontend, backend, and database solutions.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 animate-fade-in-up delay-750">
+        <div class="text-3xl font-bold text-blue-400">06</div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-200">Cloud & Server Solutions</h3>
+          <p class="text-gray-400">AWS EC2 deployment and Linux production setup.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <hr>
-  <!-- Social Icons -->
-  <div class="flex justify-center space-x-6 mt-3">
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/your-username" target="_blank" class="text-gray-400 hover:text-white text-xl">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://instagram.com/your-username" target="_blank" class="text-gray-400 hover:text-pink-500 text-xl">
-      <i class="fab fa-instagram"></i>
-    </a>
+</section>
+
+
+
+
+
+  <!-- Contact -->
+<section id="contact" class="py-24 bg-gradient-to-r from-gray-900 to-black">
+  <h2 class="text-4xl font-bold text-center mb-6 text-cyan-400">Contact Us</h2>
+  <p class="text-center text-gray-400 mb-14">
+    Have a question or need more information? Feel free to reach out to us.
+  </p>
+
+  <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+
+    <!-- Email -->
+    <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+      <div class="text-4xl text-cyan-400 mb-4">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-cyan-400 mb-3">Email</h3>
+      <p class="text-gray-400 mb-2">
+        Reach out for career opportunities, interviews, or professional collaborations.
+      </p>
+      <a href="mailto:vamshimunugala46@gmail.com"
+         class="text-blue-400 hover:text-cyan-400 transition">
+        vamshimunugala46@gmail.com
+      </a>
+    </div>
+
+    <!-- Phone -->
+    <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+      <div class="text-4xl text-cyan-400 mb-4">
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-cyan-400 mb-3">Phone</h3>
+      <p class="text-gray-400 mb-2">
+       Available for discussions regarding projects, skill applications, and tech roles.
+      </p>
+      <a href="tel:+918143158903"
+         class="text-blue-400 hover:text-cyan-400 transition">
+        +91 8143158903
+      </a>
+    </div>
+
+    <!-- Office -->
+    <div class="bg-gray-900/70 p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+      <div class="text-4xl text-cyan-400 mb-4">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-cyan-400 mb-3">Office</h3>
+      <p class="text-gray-400 mb-2">
+        Open to full-time positions, internships, and freelance opportunities.
+      </p>
+      <p class="text-blue-400">
+        Hyderabad, Telangana
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Add Font Awesome in your <head -->
+<footer class="bg-black/80 py-6 text-center border-t border-gray-800">
+
+  <!-- Footer Main -->
+  <div style="background:#0f172a; color:#cbd5e1; padding:40px 20px;">
+
+    <!-- Columns -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1100px; margin:auto; gap:30px;">
+
+      <!-- Column 1 : Logo & Description -->
+      <div style="flex:1; min-width:220px; text-align:left;">
+        <h2 style="color:#38bdf8; margin-bottom:10px;"><b>VamshiX - Generative AI Engineer</b></h2>
+        <p style="font-size:14px; line-height:1.6;">
+         Subscribe to explore my latest projects, AI-driven innovations, and product releases.
+I share real-world problem-solving approaches, startup experiments, and modern technologies while building scalable, production-ready solutions.
+        </p>
+        <p style="font-size:14px; margin-top:8px;">
+          Stay up to date with our latest news and updates.
+        </p>
+      </div>
+
+      <!-- Column 2 : Company -->
+      <div style="flex:1; min-width:180px; text-align:left;">
+        <h3 style="color:#e5e7eb; margin-bottom:10px;"><b>Company</b></h3>
+        <ul style="list-style:none; padding:0; line-height:2;">
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Home</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">About Us</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Contact Us</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Portfolio</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 : Services -->
+      <div style="flex:1; min-width:180px; text-align:left;">
+        <h3 style="color:#e5e7eb; margin-bottom:10px;"><b>Services</b></h3>
+        <ul style="list-style:none; padding:0; line-height:2;">
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Services</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Testimonials</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">Support</a></li>
+          <li><a href="#" target="_blank" style="color:#cbd5e1; text-decoration:none;">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 : Connect with us -->
+      <div style="flex:1; min-width:200px; text-align:left;">
+        <h3 style="color:#e5e7eb; margin-bottom:12px;"><b>Connect with us</b></h3>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <a href="https://www.linkedin.com/in/munugala vamshi" target="_blank"
+             style="display:flex; align-items:center; gap:10px; color:#94a3b8; font-size:15px; text-decoration:none;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+
+          
+          <a href="https://instagram.com/_ig.vamshi" target="_blank"
+             style="display:flex; align-items:center; gap:10px; color:#94a3b8; font-size:15px; text-decoration:none;">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+
+          <a href="https://facebook.com/vamshi munugala" target="_blank"
+             style="display:flex; align-items:center; gap:10px; color:#94a3b8; font-size:15px; text-decoration:none;">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+
+          <a href="https://youtube.com/@#" target="_blank"
+             style="display:flex; align-items:center; gap:10px; color:#94a3b8; font-size:15px; text-decoration:none;">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+
+          <a href="https://x.com/vamshi munugala" target="_blank"
+             style="display:flex; align-items:center; gap:10px; color:#94a3b8; font-size:15px; text-decoration:none;">
+            <i class="fab fa-x-twitter"></i> X (Twitter)
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <hr style="border:0; border-top:1px solid #1f2933; margin:30px 0 15px;">
+
+    <p style="font-size:13px; color:#9ca3af; text-align:center;">
+     © 2026 VM | Software & AI Developer
+Building scalable applications and intelligent solutions.
+      &nbsp;|&nbsp;
+      <a href="/privacy-policy" target="_blank" style="color:#9ca3af; text-decoration:none;">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/terms-of-service" target="_blank" style="color:#9ca3af; text-decoration:none;">Terms of Service</a>
+      &nbsp;|&nbsp;
+      <a href="/cookies-policy" target="_blank" style="color:#9ca3af; text-decoration:none;">Cookies Policy</a>
+    </p>
+
   </div>
 </footer>
 
+
 <script>
-     const openSignin = document.getElementById("openSignin");
-  const authModal = document.getElementById("authModal");
-  const closeModal = document.getElementById("closeModal");
-  const signinForm = document.getElementById("signinForm");
-  const signupForm = document.getElementById("signupForm");
-  const showSignup = document.getElementById("showSignup");
-  const showSignin = document.getElementById("showSignin");
-
-  openSignin.addEventListener("click", (e) => {
-    e.preventDefault();
-    authModal.classList.remove("hidden");
-    signinForm.classList.remove("hidden");
-    signupForm.classList.add("hidden");
-  });
-
-  closeModal.addEventListener("click", () => {
-    authModal.classList.add("hidden");
-  });
-
-  showSignup.addEventListener("click", (e) => {
-    e.preventDefault();
-    signinForm.classList.add("hidden");
-    signupForm.classList.remove("hidden");
-  });
-
-  showSignin.addEventListener("click", (e) => {
-    e.preventDefault();
-    signupForm.classList.add("hidden");
-    signinForm.classList.remove("hidden");
-  });
-
-
   function openModal(src) {
     document.getElementById("modalImage").src = src;
     document.getElementById("imageModal").classList.remove("hidden");
-    document.getElementById("imageModal").classList.add("flex");
+    document.getElementById("imageModal").classList.add("flex");	
   }
 
   function closeModal() {
@@ -504,6 +689,19 @@
     document.getElementById("imageModal").classList.remove("flex");
   }
 
+
+
+  document.getElementById('about-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default jump
+    const target = document.getElementById('about');
+    target.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to About section
+  });
+
+ document.getElementById('service-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default jump
+    const target = document.getElementById('our-services');
+    target.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+  });
 </script>
 </body>
 </html>
